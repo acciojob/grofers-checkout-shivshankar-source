@@ -7,12 +7,16 @@ let table=document.querySelector("table")
 
 const getSum = () => {
 //Add your code here
+	
 	let sum=0;
   for(let t of allMoneyList){
 	  sum+=parseFloat(t.innerText);
 }
 	let tr=document.createElement("tr")
-	tr.innerText=sum
+	let td=document.createElement("td")
+	td.colSpan = 2;
+	td.innerText=sum
+	tr.append(td)
 	table.append(tr)
 };
 
