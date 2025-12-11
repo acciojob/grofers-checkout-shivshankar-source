@@ -2,7 +2,7 @@ const getSumBtn = document.createElement("button");
 getSumBtn.innerText = "Count Price";
 document.body.appendChild(getSumBtn);
 
-let allMoneyList = document.querySelectorAll(".prices");
+let allMoneyList = document.querySelectorAll(".price");
 let table = document.querySelector("table");
 
 const getSum = () => {
@@ -13,6 +13,7 @@ const getSum = () => {
 
   let tr = document.createElement("tr");
   let td = document.createElement("td");
+	td.className="price"
   td.innerText = sum;  // keep it simple
   tr.append(td);
   table.append(tr);
